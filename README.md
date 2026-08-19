@@ -67,4 +67,5 @@ Embedded_Project_Template/
 
 ## License
 
-按需选择开源协议（仓库根预留 `LICENSE` 文件位置）。
+[MIT License](LICENSE)
+
