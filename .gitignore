@@ -1,0 +1,7 @@
+# 平台文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 通用临时
+*.tmp

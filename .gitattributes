@@ -1,0 +1,84 @@
+# ---------- 行尾规则 ----------
+# 源码/文本统一 LF（Windows 检出时按需转 CRLF）
+* text=auto
+
+*.c text eol=lf
+*.h text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.s text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+Makefile text eol=lf
+
+# Windows 脚本保留 CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# ---------- 二进制（不参与 diff/文本转换） ----------
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.gif binary
+*.ico binary
+
+# ---------- Git LFS：大二进制文件 ----------
+# PCB/原理图/库（Altium 等 EDA，扩展名大小写按工具实际情况补充）
+*.PcbDoc filter=lfs diff=lfs merge=lfs -text
+*.pcbdoc filter=lfs diff=lfs merge=lfs -text
+*.SchDoc filter=lfs diff=lfs merge=lfs -text
+*.schdoc filter=lfs diff=lfs merge=lfs -text
+*.PcbLib filter=lfs diff=lfs merge=lfs -text
+*.pcblib filter=lfs diff=lfs merge=lfs -text
+*.SchLib filter=lfs diff=lfs merge=lfs -text
+*.schlib filter=lfs diff=lfs merge=lfs -text
+
+# 3D/结构
+*.step filter=lfs diff=lfs merge=lfs -text
+*.stp filter=lfs diff=lfs merge=lfs -text
+*.sldprt filter=lfs diff=lfs merge=lfs -text
+*.sldasm filter=lfs diff=lfs merge=lfs -text
+*.igs filter=lfs diff=lfs merge=lfs -text
+*.iges filter=lfs diff=lfs merge=lfs -text
+*.stl filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+
+# 压缩包 / 文档 / 表格
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.rar filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+
+# 固件发布件（Release/ 下）
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.hex filter=lfs diff=lfs merge=lfs -text
+
+# ---------- Git LFS：媒体与附加资产（按需） ----------
+# 视频（用户手册/演示）
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+
+# 音频（提示音/语音素材）
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.aac filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+
+# 字体（UI/文档资源）
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+
